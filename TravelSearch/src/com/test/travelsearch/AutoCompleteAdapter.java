@@ -89,17 +89,19 @@ public class AutoCompleteAdapter extends ArrayAdapter<String> implements Filtera
 			
 			//Location object with the current user location.
 			currentLocation = getCurrentLocation();
-			
-			for(int i=0;i<jsonArray.length();i++){
+			int length = jsonArray.length();
+			Location location;
+			float distance;
+			for(int i=0;i<length;i++){
 				if(currentLocation!=null){
 					double latitude = jsonArray.getJSONObject(i).getJSONObject("geo_position").getDouble("latitude");
 					double longitude = jsonArray.getJSONObject(i).getJSONObject("geo_position").getDouble("longitude");
 					
 					//Create location object with lat and long details for each result
-					Location location = new Location(jsonArray.getJSONObject(i).getString("name"));
+					location = new Location(jsonArray.getJSONObject(i).getString("name"));
 					location.setLatitude(latitude);
 					location.setLongitude(longitude);
-					float distance = location.distanceTo(currentLocation);
+					distance = location.distanceTo(currentLocation);
 					map.put(distance,location.getProvider());
 				}else{
 					cityNameList.add(jsonArray.getJSONObject(i).getString("name"));

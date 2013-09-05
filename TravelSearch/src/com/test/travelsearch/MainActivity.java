@@ -94,7 +94,7 @@ public class MainActivity extends Activity {
 	}
 	
 	public void updateEditText() {
-		String myFormat = "EEE, dd MMM yyyy"; // In which you need put here
+		String myFormat = "EEE, dd MMM yyyy"; 
 		SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 		mDateEditText.setText(sdf.format(myCalendar.getTime()));
 	}
