@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/autoCompleteTextView1"
         android:layout_alignParentTop="true"
-        android:text="@string/go_euro"
+        android:text="@string/travel_search"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="35sp" />
 

@@ -4,6 +4,6 @@
     <string name="app_name">Travel Search</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    <string name="go_euro">GoEuro</string>
+    <string name="travel_search">Travel Search</string>
 
 </resources>
